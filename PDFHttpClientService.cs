@@ -17,6 +17,7 @@
         {
             if (!string.IsNullOrEmpty(token))
                 _httpClient.DefaultRequestHeaders.Add("Authorization", token);
+
             if (landscape)
                 _httpClient.DefaultRequestHeaders.Add("landscape", "true");
 
