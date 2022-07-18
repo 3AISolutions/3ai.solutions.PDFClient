@@ -5,9 +5,9 @@ namespace _3ai.solutions.PDFClient
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddPDFHttp(this IServiceCollection services, string baseAddress, string licence)
+        public static IServiceCollection AddPDFClient(this IServiceCollection services, string baseAddress, string licence)
         {
-            services.AddHttpClient<PDFHttpClientService>(
+            services.AddHttpClient<PDFClientService>(
                     o =>
                     {
                         o.BaseAddress = new(baseAddress);

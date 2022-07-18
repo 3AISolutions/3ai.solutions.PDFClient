@@ -1,10 +1,10 @@
 ﻿namespace _3ai.solutions.PDFClient
 {
-    public class PDFHttpClientService
+    public class PDFClientService
     {
         private readonly HttpClient _httpClient;
 
-        public PDFHttpClientService(HttpClient httpClient)
+        public PDFClientService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
