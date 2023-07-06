@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net6.0</TargetFrameworks><!--;net7.0-->
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<RootNamespace>_3ai.solutions.PDFClient</RootNamespace>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>2.$([System.DateTime]::UtcNow.Date.Subtract($([System.DateTime]::Parse("2000-01-01"))).TotalDays).$([System.DateTime]::UtcNow.Hour)</Version>
+		<Version>7.$([System.DateTime]::UtcNow.Date.Subtract($([System.DateTime]::Parse("2000-01-01"))).TotalDays).$([System.DateTime]::UtcNow.Hour)</Version>
 		<PackageDescription>Client which connects to the 3ai.solutions PDF conversion service</PackageDescription>
-		<RepositoryUrl>https://github.com/kapiosk/3ai.solutions.PDFClient/</RepositoryUrl>
+		<RepositoryUrl>https://github.com/organizations/3AISolutions/3ai.solutions.PDFClient/</RepositoryUrl>
 	</PropertyGroup>
 	<PropertyGroup>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>

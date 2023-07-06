@@ -1,1 +1,1 @@
-﻿# 3ai.solutions.Translator
+﻿# 3ai.solutions.PDFClient
