@@ -11,17 +11,16 @@
 
         public async Task<byte[]> GetPDFAsync(
             string url,
-            string token = "",
+            string? token = null,
             bool landscape = false,
             CancellationToken cancellationToken = default)
         {
-            if (!string.IsNullOrEmpty(token))
-                _httpClient.DefaultRequestHeaders.Add("Authorization", token);
-
+            var message = new HttpRequestMessage(HttpMethod.Get, $"PDFURL?dataUrl={url}");
+            if (token is not null)
+                message.Headers.Add("Authorization", token);
             if (landscape)
-                _httpClient.DefaultRequestHeaders.Add("landscape", "true");
-
-            var response = await _httpClient.GetAsync($"PDFURL?dataUrl={url}", cancellationToken);
+                message.Headers.Add("landscape", "true");
+            var response = await _httpClient.SendAsync(message, cancellationToken);
             return await response.Content.ReadAsByteArrayAsync(cancellationToken);
         }
     }
